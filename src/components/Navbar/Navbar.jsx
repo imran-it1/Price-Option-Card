@@ -16,7 +16,7 @@ const Navbar = () => {
 
 	return (
 		<div>
-			<h1 className=" text-4xl bg-gray-500 text-center font-semibold mb-2 py-2">
+			<h1 className=" text-4xl bg-gray-500 text-center text-white font-semibold mb-2 py-2">
 				Responsive Navbar
 			</h1>
 			<nav className=" mb-10 container mx-auto">

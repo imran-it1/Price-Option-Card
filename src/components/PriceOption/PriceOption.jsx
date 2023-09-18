@@ -4,7 +4,7 @@ const PriceOption = ({ option }) => {
 	const { name, price, features } = option;
 
 	return (
-		<div className="bg-gray-700 rounded-md text-white px-5 py-5 flex flex-col">
+		<div className="bg-gray-700 rounded-xl text-white px-5 py-5 flex flex-col hover:cursor-pointer">
 			<div className=" text-center">
 				<p className=" text-2xl font-semibold">{name}</p>
 				<p className=" text-gray-100">{price}</p>
