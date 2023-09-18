@@ -15,32 +15,32 @@ const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<nav className=" mb-10">
-			<h1 className=" text-4xl text-teal-500 text-center font-semibold">
+		<div>
+			<h1 className=" text-4xl bg-gray-500 text-center font-semibold mb-2 py-2">
 				Responsive Navbar
 			</h1>
-
-			<div onClick={() => setOpen(!open)} className=" ">
-				<div className=" transition-all duration-300 ease-in">
-					{open ? (
-						<AiOutlineClose className="text-xl" />
-					) : (
-						<HiMenu className="cursor-pointer text-xl md:hidden" />
-					)}
+			<nav className=" mb-10 container mx-auto">
+				<div onClick={() => setOpen(!open)} className=" ">
+					<div className=" transition-all duration-300 ease-in">
+						{open ? (
+							<AiOutlineClose className="text-xl" />
+						) : (
+							<HiMenu className="cursor-pointer text-xl md:hidden" />
+						)}
+					</div>
 				</div>
-			</div>
-
-			<ul
-				className={`md:flex absolute md:static  bg-emerald-600  text-white md:bg-white md:text-black rounded-md shadow-lg md:shadow-none pl-2 py-3  transition-all duration-300 ease-in ${
-					open ? "top-24 left-0" : "top-24 -left-40"
-				}
-				`}
-			>
-				{routes.map((route) => (
-					<Links key={route.id} route={route}></Links>
-				))}
-			</ul>
-		</nav>
+				<ul
+					className={`md:flex absolute md:static  bg-emerald-600  text-white md:bg-white md:text-black rounded-md shadow-lg md:shadow-none pl-2 py-3  transition-all duration-300 ease-in ${
+						open ? "top-24 left-0" : "top-24 -left-40"
+					}
+					`}
+				>
+					{routes.map((route) => (
+						<Links key={route.id} route={route}></Links>
+					))}
+				</ul>
+			</nav>
+		</div>
 	);
 };
 
